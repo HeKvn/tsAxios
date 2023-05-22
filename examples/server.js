@@ -8,6 +8,14 @@ const WebpackConfig = require('./webpack.config')
 const app = express()
 const compiler = webpack(WebpackConfig)
 
+const router = express.Router()
+router.get('/simple/get', (req, res) => {
+    res.json({
+        msg: 'hello, word'
+    })
+})
+app.use(router)
+
 app.use(webpackDevMiddleware(compiler, {
     publicPath: '/__build__/',
     stats: {
