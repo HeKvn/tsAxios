@@ -40,7 +40,7 @@ export function bulidURL(url: string, params?: any) {
 
   if (serializedParams) {
     const markIndex = url.indexOf('#')
-    if (~markIndex) url = url.slice(0, markIndex)
+    if (~markIndex) url = url.slice(0, markIndex) // 丢弃哈希值
     url += (url.indexOf('?') === -1 ? '?' : '&') + serializedParams
   }
 
