@@ -4,4 +4,4 @@ export const isDate = (val: any): val is Date => toString.call(val) === '[object
 
 export const isObject = (val: any): val is Object => val !== null && typeof val === 'object'
 
-export const isPlainObject = (val: any): val is Object => toString.call(val) === '[object, Object]'
+export const isPlainObject = (val: any): val is Object => toString.call(val) === '[object Object]'
