@@ -18,7 +18,7 @@ function transformRequestData(config: AxiosRequestConfig) {
 
 // 处理请求头
 function transformHeaders(config: AxiosRequestConfig) {
-  const { data, headers } = config
+  const { data, headers = {} } = config
   return processHeaders(headers, data)
 }
 
