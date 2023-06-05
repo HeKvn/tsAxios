@@ -30,7 +30,7 @@ function processConfig(config: AxiosRequestConfig) {
 
 function axios(config: AxiosRequestConfig) {
   processConfig(config)
-  xhr(config)
+  return xhr(config)
 }
 
 export default axios
